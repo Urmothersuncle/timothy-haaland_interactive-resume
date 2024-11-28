@@ -1,11 +1,16 @@
-document.addEventListener('DOMContentLoaded', function() {
-    init2Truths1Lie();
-    createThisOrThatRounds();
-    initThisOrThatGame();
-    handleVisibility();
+document.addEventListener('DOMContentLoaded', function () {
+    if (document.querySelector('.favorite-game-container')) {
+        init2Truths1Lie();
+    }
 
+    if (document.querySelector('.this-or-that-container')) {
+        createThisOrThatRounds();
+        initThisOrThatGame();
+    }
 
-    window.addEventListener('scroll', handleScroll);
+    initVisibilityHandling();
+
+    window.addEventListener('scroll', handleVisibility);
 });
 
 const games = [
@@ -73,6 +78,8 @@ const games = [
 
 function init2Truths1Lie() {
     const gameContainer = document.querySelector('.favorite-game-container');
+    if (!gameContainer) return; 
+
     games.forEach(game => {
         createGame(game, gameContainer);
     });
@@ -96,18 +103,17 @@ function handleGuess(button, statement, game) {
     if (statement.isLie) {
         button.classList.add('correct');
         allButtons.forEach(btn => {
-            btn.disabled = true;  
-            btn.classList.add('disabled');  
-            if (!btn.classList.contains('correct') && !btn.classList.contains('incorrect')) {
-                btn.style.background = "rgba(30, 30, 30, 1)"; 
-                btn.style.borderColor = "#007BFF"; 
+            btn.disabled = true;
+            btn.classList.add('disabled');
+            if (!btn.classList.contains('correct')) {
+                btn.style.background = "rgba(30, 30, 30, 1)";
+                btn.style.borderColor = "#007BFF";
             }
         });
         showModal(game.explanation, false);
     } else {
         button.classList.add('incorrect');
-        button.disabled = true;  
-        button.classList.add('disabled');
+        button.disabled = true;
         showModal(game.hint, true);
     }
 }
@@ -117,11 +123,13 @@ function initVisibilityHandling() {
         const thisOrThatContainer = document.querySelector('.this-or-that-container');
         const leftContent = document.querySelector('.left-side');
         const rightContent = document.querySelector('.right-side');
+
+        if (!thisOrThatContainer) return;
+
         const containerRect = thisOrThatContainer.getBoundingClientRect();
-        const containerVisible = (
+        const containerVisible =
             containerRect.top >= 0 &&
-            containerRect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
-        );
+            containerRect.bottom <= (window.innerHeight || document.documentElement.clientHeight);
 
         if (containerVisible) {
             leftContent.style.display = 'none';
@@ -134,15 +142,20 @@ function initVisibilityHandling() {
 
     handleVisibility();
     window.addEventListener('scroll', handleVisibility);
-    window.addEventListener('resize', handleVisibility);  
+    window.addEventListener('resize', handleVisibility);
+}  
 
 function showModal(text, isHint) {
+    if (typeof bootstrap === 'undefined' || !bootstrap.Modal) {
+        console.error("Bootstrap Modal is not available.");
+        return;
+    }
+
     const modal = new bootstrap.Modal(document.getElementById('explanationModal'));
     const modalText = document.getElementById('explanationText');
-    const modalTitle = document.getElementById('explanationModalLabel');  
+    const modalTitle = document.getElementById('explanationModalLabel');
 
     modalTitle.textContent = isHint ? "Oops... Not Quite" : "Explanation";
-
     modalText.innerHTML = isHint ? "Hint: " + text : text;
     modal.show();
 }
@@ -222,12 +235,13 @@ function createThisOrThatRounds() {
     ];
 
     const container = document.querySelector('.this-or-that-container');
+    if (!container) return; // Guard clause if container is missing
 
     roundsData.forEach((round, index) => {
         const roundDiv = document.createElement('div');
         roundDiv.className = 'round';
         roundDiv.id = `round-${index + 1}`;
-        roundDiv.style.display = index === 0 ? 'block' : 'none'; 
+        roundDiv.style.display = index === 0 ? 'block' : 'none';
 
         const questionP = document.createElement('p');
         questionP.textContent = round.question;
@@ -252,6 +266,8 @@ function createThisOrThatRounds() {
 
 function initThisOrThatGame() {
     const rounds = document.querySelectorAll('.round');
+    if (!rounds.length) return;
+
     let currentRound = 0;
 
     rounds[currentRound].style.display = 'block';
@@ -259,28 +275,29 @@ function initThisOrThatGame() {
     rounds.forEach((round, index) => {
         const choices = round.querySelectorAll('.choice-img');
         choices.forEach(choice => {
-            choice.addEventListener('click', function() {
+            choice.addEventListener('click', function () {
                 handleChoice(this, rounds, index);
             });
         });
     });
 }
 
+// Handle User Choices in This or That
 function handleChoice(choice, rounds, index) {
     const correct = choice.dataset.answer === 'correct';
 
     if (correct) {
-        choice.classList.add('correct'); 
+        choice.classList.add('correct');
     } else {
-        choice.classList.add('incorrect'); 
+        choice.classList.add('incorrect');
     }
 
     setTimeout(() => {
         rounds[index].style.display = 'none';
         if (index + 1 < rounds.length) {
-            rounds[index + 1].style.display = 'block'; 
+            rounds[index + 1].style.display = 'block';
         } else {
             alert("You've completed the game!");
         }
-    }, 1000); 
+    }, 1000);
 }
