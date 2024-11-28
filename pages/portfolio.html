@@ -9,8 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
-  <link href="assets/css/global_styles.css" rel="stylesheet">
-  <link href="assets/css/portfolio_styles.css" rel="stylesheet">
+  <link href="../assets/css/global_styles.css" rel="stylesheet">
+  <link href="../assets/css/portfolio_styles.css" rel="stylesheet">
 </head>
 <body>
   <!-- Background -->
@@ -28,10 +28,10 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-              <li class="nav-item"><a class="nav-link" href="pages/welcome.html">Welcome</a></li>
-              <li class="nav-item"><a class="nav-link" href="pages/favorites.html">Favorites</a></li>
-              <li class="nav-item"><a class="nav-link" href="pages/portfolio.html">Portfolio</a></li>
-              <li class="nav-item"><a class="nav-link" href="pages/resume.html">Resume</a></li>
+              <li class="nav-item"><a class="nav-link" href="index.html">Welcome</a></li>
+              <li class="nav-item"><a class="nav-link" href="/pages/favorites.html">Favorites</a></li>
+              <li class="nav-item"><a class="nav-link" href="/pages/portfolio.html">Portfolio</a></li>
+              <li class="nav-item"><a class="nav-link" href="/pages/resume.html">Resume</a></li>
               <li class="nav-item tool-btn">
                 <button id="toolButton" onclick="openToolModal()">Page Tools</button>
               </li>
@@ -44,27 +44,27 @@
 
         <!-- Archery Game Card -->
         <div class="game-card">
-          <img src="assets/images/portfolio/play/arrow_game.png" class="card-img-top" alt="Archery Game Thumbnail">
+          <img src="../assets/images/portfolio/play/arrow_game.png" class="card-img-top" alt="Archery Game Thumbnail">
           <div class="overlay-info">
             <h5 class="card-title">Archery Game</h5>
             <p class="card-text">Try your skills in my first game in Unity!</p>
-            <button onclick="launchFullScreen('/assets/js/portfolio/projects/ArrowGame/index.html')" class="btn btn-primary">Play Game</button>
+            <button onclick="launchFullScreen('../assets/js/portfolio/projects/ArrowGame/index.html')" class="btn btn-primary">Play Game</button>
           </div>
         </div>
 
         <!-- Blender Animation Card -->
         <div class="game-card">
-          <img src="assets/images/portfolio/play/donut.png" class="card-img-top" alt="Blender Animation Thumbnail">
+          <img src="../assets/images/portfolio/play/donut.png" class="card-img-top" alt="Blender Animation Thumbnail">
           <div class="overlay-info">
             <h5 class="card-title">Blender Animation</h5>
             <p class="card-text">All Hail The Blender Guru.</p>
-            <button onclick="window.open('/assets/images/portfolio/play/donut_animation.mp4')" class="btn btn-primary">Watch Animation</button>
+            <button onclick="window.open('../assets/images/portfolio/play/donut_animation.mp4')" class="btn btn-primary">Watch Animation</button>
           </div>
         </div>
 
         <!-- Zyla World Game Card -->
         <div class="game-card">
-          <img src="assets/images/portfolio/play/zyla_world.png" class="card-img-top" alt="Zyla World Game Thumbnail">
+          <img src="../assets/images/portfolio/play/zyla_world.png" class="card-img-top" alt="Zyla World Game Thumbnail">
           <div class="overlay-info">
             <h5 class="card-title">Zyla World</h5>
             <p class="card-text">Explore the world of Zyla in this fun Scratch game!</p>
@@ -115,9 +115,9 @@
   </div>
 
   <!-- JavaScript Files -->
-  <script src="assets/js/global/tools.js" defer></script>
-  <script src="assets/js/portfolio/background_portfolio.js"></script>
-  <script src="assets/js/portfolio/portfolio_projects.js"></script>
+  <script src="../assets/js/global/tools.js" defer></script>
+  <script src="../assets/js/portfolio/background_portfolio.js"></script>
+  <script src="../assets/js/portfolio/portfolio_projects.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
