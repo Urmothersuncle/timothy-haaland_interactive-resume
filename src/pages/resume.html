@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Résumé</title>
+  <!-- Bootstrap, Google Fonts, Stylesheets -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+  <link href="/assets/css/global_styles.css" rel="stylesheet">
+  <link href="/assets/css/resume_styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Background -->
+  <canvas id="drawingCanvas"></canvas>
+
+  <!-- Center container -->
+  <div class="centered-container">
+
+    <!-- Left side content -->
+    <div class="left-side">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="/pages/welcome.html">Welcome</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/pages/favorites.html">Favorites</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/pages/portfolio.html">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/pages/resume.html">Resume</a></li>
+                    <li class="nav-item tool-btn">
+                        <button id="toolButton" onclick="openToolModal()">Page Tools</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        <div class="experience-container">
+            <h1 class="roboto-flex-header experience">Experience</h1>
+            <div class="timeline-container">
+                <div class="timeline-block">
+                    <div onclick="toggleDetail('job1-details')" class="job-title" data-detail-id="job1-details">
+                        <h3>C & R Auto Collision Repair</h3>
+                        <p>Parts Management</p>
+                    </div>
+                    <div id="job1-details" style="display:none;">
+                        <p>Lafayette, LA</p>
+                        <p>June, 2023 - May, 2024</p>
+                        <div onclick="toggleDetail('inventory-management')" class="sub-detail">Inventory Management</div>
+                        <div id="inventory-management" style="display:none;">
+                            <p>Oversaw the inventory of auto parts, ensuring optimal stock levels to support efficient repair workflows and minimize downtime.</p>
+                        </div>
+                        <div onclick="toggleDetail('vendor-relations')" class="sub-detail">Vendor Relations</div>
+                        <div id="vendor-relations" style="display:none;">
+                            <p>Negotiated with suppliers to secure competitive prices and favorable terms, fostering strong relationships to guarantee reliable parts availability and timely deliveries.</p>
+                        </div>
+                        <div onclick="toggleDetail('order-processing')" class="sub-detail">Order Processing</div>
+                        <div id="order-processing" style="display:none;">
+                            <p>Implemented a streamlined order processing system that improved the accuracy and speed of parts procurement, reducing order errors by 25%.</p>
+                        </div>
+                        <div onclick="toggleDetail('team-leadership')" class="sub-detail">Team Leadership</div>
+                        <div id="team-leadership" style="display:none;">
+                            <p>Led a team of parts clerks and inventory specialists, providing training and supervision to enhance team performance and efficiency.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-block">
+                    <div onclick="toggleDetail('job2-details')" class="job-title" data-detail-id="job2-details">
+                        <h3>AtHome Decor & Furniture</h3>
+                        <p>Customer Support Specialist & Key Holder</p>
+                    </div>
+                    <div id="job2-details" style="display:none;">
+                        <p>Lafayette, LA</p>
+                        <p>December, 2022 - June, 2023</p>
+                        <div onclick="toggleDetail('team-management')" class="sub-detail">Team Management</div>
+                        <div id="team-management" style="display:none;">
+                            <p>Directed a team of 15 employees, fostering a collaborative work environment and enhancing team efficiency.</p>
+                        </div>
+                        <div onclick="toggleDetail('store-operations')" class="sub-detail">Store Operations</div>
+                        <div id="store-operations" style="display:none;">
+                            <p>Managed opening and closing procedures, ensuring operational readiness and security. Conducted daily safety walks to ensure a secure and compliant work environment.</p>
+                        </div>
+                        <div onclick="toggleDetail('financial-oversight')" class="sub-detail">Financial Oversight</div>
+                        <div id="financial-oversight" style="display:none;">
+                            <p>Oversaw financial operations including store deposits, change orders, cash drops, and register audits to ensure accuracy and integrity.</p>
+                        </div>
+                        <div onclick="toggleDetail('departmental-expertise')" class="sub-detail">Departmental Expertise</div>
+                        <div id="departmental-expertise" style="display:none;">
+                            <p>Demonstrated proficiency across all store departments, enhancing operational flexibility and staff support. Managed the receipt of freight trucks, ensuring timely and organized handling of merchandise.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-block">
+                    <div onclick="toggleDetail('job3-details')" class="job-title" data-detail-id="job3-details">
+                        <h3>Waitr | BiteSquad</h3>
+                        <p>Partner/Customer Support Team Lead</p>
+                    </div>
+                    <div id="job3-details" style="display:none;">
+                        <p>Remote / Hybrid, Lafayette, LA</p>
+                        <p>September, 2020 - December, 2022</p>
+                        <div onclick="toggleDetail('team-coordination')" class="sub-detail">Team Coordination</div>
+                        <div id="team-coordination" style="display:none;">
+                            <p>Managed scheduling for over 30 employees, optimizing workforce allocation to enhance service delivery.</p>
+                        </div>
+                        <div onclick="toggleDetail('technical-support')" class="sub-detail">Technical Support</div>
+                        <div id="technical-support" style="display:none;">
+                            <p>Resolved technical issues for customers, restaurants, and employees using platforms such as Zendesk, HubSpot, Slack, Kustomer, Amazon Call Center, and Ujet.</p>
+                        </div>
+                        <div onclick="toggleDetail('strategic-planning')" class="sub-detail">Strategic Planning</div>
+                        <div id="strategic-planning" style="display:none;">
+                            <p>Developed daily operational plans and created heatmaps using Google Sheets to monitor and respond to peak call volumes effectively.</p>
+                        </div>
+                        <div onclick="toggleDetail('employee-development')" class="sub-detail">Employee Development</div>
+                        <div id="employee-development" style="display:none;">
+                            <p>Implemented individual development plans, conducting mock interviews and providing career coaching to prepare employees for advancement.</p>
+                        </div>
+                        <div onclick="toggleDetail('quality-assurance')" class="sub-detail">Quality Assurance</div>
+                        <div id="quality-assurance" style="display:none;">
+                            <p>Monitored and coached employees on quality assurance during live customer interactions, offering feedback and praise to improve service outcomes.</p>
+                        </div>
+                        <div onclick="toggleDetail('employee-engagement')" class="sub-detail">Employee Engagement</div>
+                        <div id="employee-engagement" style="display:none;">
+                            <p>Actively engaged with staff to mitigate burnout and reduce turnover by fostering a supportive work environment and facilitating open communication.</p>
+                        </div>
+                        <div onclick="toggleDetail('operational-leadership')" class="sub-detail">Operational Leadership</div>
+                        <div id="operational-leadership" style="display:none;">
+                            <p>Worked alongside employees during peak periods, providing real-time support and training to handle complex issues.</p>
+                        </div>
+                        <div onclick="toggleDetail('conflict-resolution')" class="sub-detail">Conflict Resolution</div>
+                        <div id="conflict-resolution" style="display:none;">
+                            <p>Managed escalated calls and chats, ensuring customer and partner satisfaction and retention.</p>
+                        </div>
+                        <div onclick="toggleDetail('performance-monitoring')" class="sub-detail">Performance Monitoring</div>
+                        <div id="performance-monitoring" style="display:none;">
+                            <p>Kept track of employee performance issues, providing tailored scheduling solutions to optimize operational efficiency.</p>
+                        </div>
+                        <div onclick="toggleDetail('executive-communication')" class="sub-detail">Executive Communication</div>
+                        <div id="executive-communication" style="display:none;">
+                            <p>Maintained regular communication with senior management to align team efforts with organizational goals and changes.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-block">
+                    <div onclick="toggleDetail('job4-details')" class="job-title" data-detail-id="job4-details">
+                        <h3>Mistras Group</h3>
+                        <p>Rope Access Technician / Blaster Painter</p>
+                    </div>
+                    <div id="job4-details" style="display:none;">
+                        <p>Youngsville, LA</p>
+                        <p>March, 2019 - September, 2020</p>
+                        <div onclick="toggleDetail('site-inspection')" class="sub-detail">Site Inspection</div>
+                        <div id="site-inspection" style="display:none;">
+                            <p>Conducted detailed assessments of work sites to identify any operational issues and ensure the correct usage of equipment for sandblasting tasks.</p>
+                        </div>
+                        <div onclick="toggleDetail('equipment-operation')" class="sub-detail">Equipment Operation</div>
+                        <div id="equipment-operation" style="display:none;">
+                            <p>Managed and calibrated equipment to control the pressure and mixture of abrasive materials, contributing to precise and efficient operations.</p>
+                        </div>
+                        <div onclick="toggleDetail('procurement-assistance')" class="sub-detail">Procurement Assistance</div>
+                        <div id="procurement-assistance" style="display:none;">
+                            <p>Collaborated with the foreman to procure necessary job-related equipment and recommended tools that enhanced operational effectiveness.</p>
+                        </div>
+                        <div onclick="toggleDetail('professional-certification')" class="sub-detail">Professional Certification</div>
+                        <div id="professional-certification" style="display:none;">
+                            <p>Attained Rope Access Level 1 certification.</p>
+                        </div>
+                        <div onclick="toggleDetail('field-experience')" class="sub-detail">Field Experience</div>
+                        <div id="field-experience" style="display:none;">
+                            <p>Accumulated over 500 hours of hands-on experience performing tasks on ropes, demonstrating proficiency in high-altitude work environments.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-block">
+                    <div onclick="toggleDetail('job5-details')" class="job-title" data-detail-id="job5-details">
+                        <h3>Millennium Home Design</h3>
+                        <p>Marketing Manager / Sales</p>
+                    </div>
+                    <div id="job5-details" style="display:none;">
+                        <p>Youngsville, LA</p>
+                        <p>January, 2017 - March, 2019</p>
+                        <div onclick="toggleDetail('community-outreach')" class="sub-detail">Community Outreach</div>
+                        <div id="community-outreach" style="display:none;">
+                            <p>Conducted door-to-door canvassing to offer free roofing inspections to homeowners, educating them on roof maintenance and upcoming home improvement investments.</p>
+                        </div>
+                        <div onclick="toggleDetail('team-leadership2')" class="sub-detail">Team Leadership</div>
+                        <div id="team-leadership2" style="display:none;">
+                            <p>Enhanced team’s lead generation performance by 40% through strategic pre-mapping of canvassing locations and delivering motivational training on customer engagement techniques.</p>
+                        </div>
+                        <div onclick="toggleDetail('management')" class="sub-detail">Management</div>
+                        <div id="management" style="display:none;">
+                            <p>Supervised a team of 5-10 employees, overseeing daily operational tasks and ensuring high-quality customer service.</p>
+                        </div>
+                        <div onclick="toggleDetail('conflict-resolution2')" class="sub-detail">Conflict Resolution</div>
+                        <div id="conflict-resolution2" style="display:none;">
+                            <p>Addressed and resolved escalated customer service issues, ensuring client satisfaction and retention.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-block">
+                    <div onclick="toggleDetail('job6-details')" class="job-title" data-detail-id="job6-details">
+                        <h3>Eventforce Inc.</h3>
+                        <p>Supervisor / Mobile Concierge / Data Tech</p>
+                    </div>
+                    <div id="job6-details" style="display:none;">
+                        <p>Lafayette, LA</p>
+                        <p>September, 2014 - November, 2018</p>
+                        <div onclick="toggleDetail('event-support')" class="sub-detail">Event Support</div>
+                        <div id="event-support" style="display:none;">
+                            <p>Assisted at large-scale conferences with over 25,000 attendees, including events for major clients like Microsoft and Cisco.</p>
+                        </div>
+                        <div onclick="toggleDetail('customer-service')" class="sub-detail">Customer Service</div>
+                        <div id="customer-service" style="display:none;">
+                            <p>Resolved customer issues effectively and trained users on technology use, enhancing event experiences and meeting executive standards.</p>
+                        </div>
+                        <div onclick="toggleDetail('operational-duties')" class="sub-detail">Operational Duties</div>
+                        <div id="operational-duties" style="display:none;">
+                            <p>Managed attendee flow, monitored session engagement, and ensured accurate registration and badging processes.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-block">
+                    <div onclick="toggleDetail('job7-details')" class="job-title" data-detail-id="job7-details">
+                        <h3>Walmart</h3>
+                        <p>Overnight Stocker</p>
+                    </div>
+                    <div id="job7-details" style="display:none;">
+                        <p>Lafayette, LA</p>
+                        <p>August, 2014 - October, 2015</p>
+                        <div onclick="toggleDetail('inventory')" class="sub-detail">Inventory Management</div>
+                        <div id="inventory" style="display:none;">
+                            <p>Efficiently stocked and organized merchandise, ensuring products were accurately zoned and presented.</p>
+                        </div>
+                        <div onclick="toggleDetail('customer-interaction')" class="sub-detail">Customer Interaction</div>
+                        <div id="customer-interaction" style="display:none;">
+                            <p>Provided customer assistance, directing patrons to products and addressing queries to enhance shopping experiences.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- End of Left-Side Div -->
+
+
+    <!-- Content for the right side -->
+    <div class="right-side">
+        <h1 class="roboto-flex-header skills">Skills</h1>
+        <div class="skills-container">
+            <section class="coding-skills">
+                <h3><strong><em>Coding Languages:</em></strong></h3>
+                <ul>
+                    <li>C</li>
+                    <li>C#</li>
+                    <li>C++</li>
+                    <li>JavaScript</li>
+                    <li>Python</li>
+                    <li>SQL</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                </ul>
+            </section>
+            <section class="other-skills">
+                <h3><strong><em>Snapshot Skills:</em></strong></h3>
+                <ul>
+                    <li>Rope Access Technician</li>
+                </ul>
+            </section>
+        </div>
+        <section class="projects">
+            <h3><strong><em>Personal Projects:</em></strong></h3>
+            <ul>
+                <li>Angry Birds - Unity: C#</li>
+                <li>Zyla World (Kids Video Game) - Scratch Project for Harvard University CS50 Course</li>
+                <li>Donut Animation - Blender Geometry Nodes</li>
+            </ul>
+        </section>
+    </div> <!-- End to Right-Side Div -->
+  </div> <!-- End to Centered Container Div -->
+
+  <!-- Tool Modal for Welcome Page -->
+  <div id="toolModal" class="tool-modal">
+    <div class="modal-content">
+        <span id="closeToolModal" class="close">&times;</span>
+        <p>Welcome to My Résumé Page!<br>Explore my work experience by clicking on each job title—click again on the responsibilities to reveal or hide more details.<br>This page also has a playful interactive background: click and drag to draw! To switch between colors (white, yellow, orange, red, purple, blue, green, and a black eraser), just press the c || C key.</p>
+        <p>This site has 4 main sections.<br>You're currently on the Résumé page.<br><br>1. The Welcome page is a simple introductory to the site with a mini-game to learn my basic info.<br>2. The Favorites page is packed with mini-games and galleries of things I love.<br>3. On the Portfolio page, you'll find projects I've worked on and updates as I complete more.<br>4. Lastly, there's the Résumé page, where you'll see my most recent résumé.</p>
+        <p>To vist the other pages, just click on the navlink button of the page you would like to explore.</p>
+    </div>
+  </div>
+
+
+  <script src="/assets/js/global/tools.js" defer></script>
+  <script src="/assets/js/resume/background_resume.js"></script>
+  <script src="/assets/js/resume/resume_content.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

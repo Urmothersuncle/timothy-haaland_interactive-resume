@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome</title>
+  <!-- Bootstrap, Google Fonts, Stylesheets -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+  <link href="/assets/css/global_styles.css" rel="stylesheet">
+  <link href="/assets/css/welcome_styles.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Background -->
+  <canvas id="matrixCanvas"></canvas>
+
+  <!-- Center container -->
+  <div class="centered-container">
+
+    <!-- Center container content -->
+    <div class="left-side">
+
+      <!-- Content for the left side -->
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container-fluid d-flex align-items-center">
+            <button class="navbar-toggler order-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse order-0" id="navbarNav">
+              <ul class="navbar-nav">
+                <!-- Nav items -->
+                <li class="nav-item"><a class="nav-link" href="/pages/welcome.html">Welcome</a></li>
+                <li class="nav-item"><a class="nav-link" href="/pages/favorites.html">Favorites</a></li>
+                <li class="nav-item"><a class="nav-link" href="/pages/portfolio.html">Portfolio</a></li>
+                <li class="nav-item"><a class="nav-link" href="/pages/resume.html">Resume</a></li>
+                <li class="nav-item tool-btn">
+                  <button id="toolButton" onclick="openToolModal()">Page Tools</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      <div class="content">
+        <h2>Howdy!</h2>
+        <h1 class="roboto-flex-header">My name is Timothy Haaland</h1>
+        <div class="roboto-flex-body">
+          <p><strong><em>Welcome to my Homepage</em></strong></p>
+          <p>Let's make this interesting. To discover more about my professional journey and personal interests, I invite you to engage with interactive challenges on my site. Each game you complete will unlock new insights about my expertise and experiences.</p>
+        </div>
+        <!-- Placeholder for the photo on mobile -->
+        <div id="photoContainer"></div>
+      </div>
+    </div>
+
+    <!-- Right-side container -->
+    <div class="right-side">
+      <img id="profilePhoto" src="/assets/images/welcome/timothy3.jpg" alt="Timothy">
+      <div id="gameContainer" class="about-me">
+        <h3>About Me</h3>
+        <!-- Game content -->
+        <div class="game-container animate-onscroll">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Modal -->
+  <div class="modal fade" id="explanationModal" tabindex="-1" aria-labelledby="explanationModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="explanationModalLabel">Explanation</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p id="explanationText"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tool Modal -->
+  <div id="toolModal" class="tool-modal">
+    <div class="modal-content">
+        <span id="closeToolModal" class="close">&times;</span>
+        <p>Howdy there partner! Welcome to my site.<br>To get started with the "About Me" mini-game, just take a guess at my basic information by clicking one of the button options. Correct answers turn green and will share more details, incorrect answers turn red and will offer a hint for the next try.</p>
+        <p>This site has 4 main sections.<br>You're currently on the Welcome page.<br><br>1. The Welcome page is a simple introductory to the site with a mini-game to learn my basic info.<br>2. The Favorites page is packed with mini-games and galleries of things I love.<br>3. On the Portfolio page, you'll find projects I've worked on and updates as I complete more.<br>4. Lastly, there's the Résumé page, where you'll see my most recent résumé.</p>
+        <p>To vist the other pages, just click on the navlink button of the page you would like to explore.</p>
+    </div>
+  </div>
+
+
+  <!-- JavaScript Files -->
+  <script src="/assets/js/global/tools.js" defer></script>
+  <script src="/assets/js/welcome/about_me.js" defer></script>
+  <script src="/assets/js/welcome/layout_adjustments.js" defer></script>
+  <script src="/assets/js/welcome/background_welcome.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

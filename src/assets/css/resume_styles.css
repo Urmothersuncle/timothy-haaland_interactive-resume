@@ -1,0 +1,126 @@
+.right-side {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    gap: 20px; 
+    max-width: 800px;
+    margin: 0 auto; 
+}
+
+.centered-container h1 {
+    color: #FFF;
+    text-shadow: 8px 8px 0 #000;
+}
+
+@keyframes rotateGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.right-side h3 {
+    font-size: 2.5em;
+    background: linear-gradient(270deg, #2abffa, #06db9b, #ec7df7);
+    background-size: 600% 600%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rotateGradient 5s infinite;
+    text-align: center;
+}
+
+.right-side h3 {
+    font-size: 1.5rem;
+    color: #FFF;
+    text-shadow: 2px 2px 0 #FFF, 6px 6px 0 #000;
+    text-align: center;
+}
+
+
+
+.coding-skills, .other-skills {
+    flex: 1;
+    width: 100%; 
+    text-align: center;
+    color: #FFF;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; 
+    width: 100%; 
+}
+
+.right-side ul {
+    list-style-type: none; 
+    padding: 0;
+}
+
+.right-side li {
+    margin-bottom: 10px; 
+    line-height: 1.6; 
+}
+
+.projects {
+    width: 100%;
+    text-align: left;
+    color:#FFF;
+    text-align: center;
+}
+
+.projects ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sub-detail {
+    cursor: pointer;
+    color: #FFF;
+    background-color: #333;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.sub-detail:hover {
+    background-color: #555;
+}
+
+.experience-container {
+    padding-top: 30px;
+    text-align: center;
+
+}
+
+.job-title {
+    text-align: center;
+    padding-top: 20px;
+    cursor: pointer; 
+    transition: background-color 0.3s, filter 0.3s;
+    filter: blur(3px);
+}
+
+.job-title:hover, .job-title.active {
+    filter: blur(0);  
+}
+
+@media (max-width: 768px) {
+    .experience-container {
+        padding-top: 50px;
+        text-align: center;
+    }
+
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .coding-skills, .other-skills {
+        width: 100%;
+        text-align: center;
+    }
+
+    .projects {
+        margin-top: 20px;
+    }
+}
