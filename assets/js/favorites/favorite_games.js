@@ -165,71 +165,71 @@ function createThisOrThatRounds() {
         {
             question: "Which do I prefer?",
             images: [
-                {src: "/assets/images/favorites/this_or_that/Beach.webp", alt: "Beach", isCorrect: false},
-                {src: "/assets/images/favorites/this_or_that/mountains.jpg", alt: "Mountains", isCorrect: true}
+                {src: "assets/images/favorites/this_or_that/Beach.webp", alt: "Beach", isCorrect: false},
+                {src: "assets/images/favorites/this_or_that/mountains.jpg", alt: "Mountains", isCorrect: true}
             ]
         },
         {
             question: "Which do I prefer?",
             images: [
-                {src: "/assets/images/favorites/this_or_that/coffee.jpg", alt: "Coffee", isCorrect: true},
-                {src: "/assets/images/favorites/this_or_that/tea.jpg", alt: "Tea", isCorrect: false}
+                {src: "assets/images/favorites/this_or_that/coffee.jpg", alt: "Coffee", isCorrect: true},
+                {src: "assets/images/favorites/this_or_that/tea.jpg", alt: "Tea", isCorrect: false}
             ]
         },
         {
             question: "Which do I prefer?",
             images: [
-                {src: "/assets/images/favorites/this_or_that/cats.jpg", alt: "Cats", isCorrect: false},
-                {src: "/assets/images/favorites/this_or_that/dogs.jpg", alt: "Dogs", isCorrect: true}
+                {src: "assets/images/favorites/this_or_that/cats.jpg", alt: "Cats", isCorrect: false},
+                {src: "assets/images/favorites/this_or_that/dogs.jpg", alt: "Dogs", isCorrect: true}
             ]
         },
         {
             question: "Which do I prefer?",
             images: [
-                {src: "/assets/images/favorites/this_or_that/football.jpg", alt: "Football", isCorrect: false},
-                {src: "/assets/images/favorites/this_or_that/basketball.jpg", alt: "Basketball", isCorrect: true}
+                {src: "assets/images/favorites/this_or_that/football.jpg", alt: "Football", isCorrect: false},
+                {src: "assets/images/favorites/this_or_that/basketball.jpg", alt: "Basketball", isCorrect: true}
             ]
         },
         {
             question: "Which do I prefer?",
             images: [
-                {src: "/assets/images/favorites/this_or_that/summer.jpg", alt: "Summer", isCorrect: false},
-                {src: "/assets/images/favorites/this_or_that/winter.jpg", alt: "Winter", isCorrect: true}
+                {src: "assets/images/favorites/this_or_that/summer.jpg", alt: "Summer", isCorrect: false},
+                {src: "assets/images/favorites/this_or_that/winter.jpg", alt: "Winter", isCorrect: true}
             ]
         },
         {
             question: "Which do I prefer?",
             images: [
-                {src: "/assets/images/favorites/this_or_that/console.jpg", alt: "Console Gaming", isCorrect: false},
-                {src: "/assets/images/favorites/this_or_that/PC.jpg", alt: "PC Gaming", isCorrect: true}
+                {src: "assets/images/favorites/this_or_that/console.jpg", alt: "Console Gaming", isCorrect: false},
+                {src: "assets/images/favorites/this_or_that/PC.jpg", alt: "PC Gaming", isCorrect: true}
             ]
         },
         {
             question: "Which do I prefer?",
             images: [
-                {src: "/assets/images/favorites/this_or_that/OnlineShopping.jpg", alt: "Online Shopping", isCorrect: true},
-                {src: "/assets/images/favorites/this_or_that/InStoreShopping.jpg", alt: "In-Store Shopping", isCorrect: false}
+                {src: "assets/images/favorites/this_or_that/OnlineShopping.jpg", alt: "Online Shopping", isCorrect: true},
+                {src: "assets/images/favorites/this_or_that/InStoreShopping.jpg", alt: "In-Store Shopping", isCorrect: false}
             ]
         },
         {
             question: "Which do I prefer?",
             images: [
-                {src: "/assets/images/favorites/this_or_that/Texting.jpg", alt: "Texting", isCorrect: false},
-                {src: "/assets/images/favorites/this_or_that/Calling.jpg", alt: "Calling", isCorrect: true}
+                {src: "assets/images/favorites/this_or_that/Texting.jpg", alt: "Texting", isCorrect: false},
+                {src: "assets/images/favorites/this_or_that/Calling.jpg", alt: "Calling", isCorrect: true}
             ]
         },
         {
             question: "Which do I prefer?",
             images: [
-                {src: "/assets/images/favorites/this_or_that/iPhone.jpg", alt: "iPhone", isCorrect: true},
-                {src: "/assets/images/favorites/this_or_that/Android.jpg", alt: "Android", isCorrect: false}
+                {src: "assets/images/favorites/this_or_that/iPhone.jpg", alt: "iPhone", isCorrect: true},
+                {src: "assets/images/favorites/this_or_that/Android.jpg", alt: "Android", isCorrect: false}
             ]
         },
         {
             question: "Which do I prefer?",
             images: [
-                {src: "/assets/images/favorites/this_or_that/Movies.jpg", alt: "Movies", isCorrect: false},
-                {src: "/assets/images/favorites/this_or_that/TvShows.jpg", alt: "TV Shows", isCorrect: true}
+                {src: "assets/images/favorites/this_or_that/Movies.jpg", alt: "Movies", isCorrect: false},
+                {src: "assets/images/favorites/this_or_that/TvShows.jpg", alt: "TV Shows", isCorrect: true}
             ]
         },
     ];
