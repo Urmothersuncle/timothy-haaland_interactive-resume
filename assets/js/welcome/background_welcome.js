@@ -45,3 +45,4 @@ window.addEventListener('resize', () => {
   canvas.height = window.innerHeight;
   drops = new Array(Math.floor(canvas.width / fontSize)).fill(1);
 });
+
