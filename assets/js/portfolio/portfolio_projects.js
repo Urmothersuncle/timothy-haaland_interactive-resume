@@ -3,8 +3,8 @@ const portfolioProjects = [
         id: 1,
         title: "Inside the Archery Game",
         description: "This is the complete code for my Archery Game. A big thanks to Jason Weimann for his amazing YouTube tutorial, which helped lay the foundation for the game. I started this project before joining CS50, and after struggling through several challenging weeks of learning C, I felt more confident in struggling through C# and adding additional features to the game.",
-        image: "images/image1.jpg", 
-        video: "images/video1.mp4"  
+        image: "assets/images/portfolio/inside/image1.jpg", 
+        video: "assets/images/portfolio/inside/donut_animation.mp4"  
     },
     {
         id: 2,
@@ -16,8 +16,8 @@ const portfolioProjects = [
         id: 3,
         title: "Future Repository Folder 2.",
         description: "Here will be a future project of mine to be displayed",
-        image: "images/image3.jpg",
-        video: "images/video1.mp4"
+        image: "assets/images/portfolio/inside/image3.jpg",
+        video: "assets/images/portfolio/inside/donut_animation.mp4"
     }
 ];
 
