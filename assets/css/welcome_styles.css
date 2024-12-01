@@ -57,20 +57,22 @@
     transition: none; 
 }
 
-@media (max-width: 768px) {
-    .content {
-        padding-top: 50px; 
-    }
+@media (max-width: 480px), 
+       (min-width: 481px) and (max-width: 767px) {
 
-    .about-me {
-        height: auto; 
-        margin-top: 10px; 
-        overflow-y: auto; 
-        padding-bottom: 20px; 
-    }
+        .content {
+            padding-top: 50px; 
+        }
 
-    .number-button {
-        padding: 8px 15px; 
-        font-size: 14px; 
-    }
+        .about-me {
+            height: auto; 
+            margin-top: 10px; 
+            overflow-y: auto; 
+            padding-bottom: 20px; 
+        }
+
+        .number-button {
+            padding: 8px 15px; 
+            font-size: 14px; 
+        }
 }

@@ -1,6 +1,6 @@
 import qrcode
 
-url = 'https://github.com/Urmothersuncle/timothy-haaland_interactive-resume'
+url = 'https://urmothersuncle.github.io/timothy-haaland_interactive-resume/'
 
 qr = qrcode.QRCode(
     version=1,
