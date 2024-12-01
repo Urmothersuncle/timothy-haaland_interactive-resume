@@ -121,6 +121,28 @@ function fetchGitHubData() {
     });
 }
 
+// Unity Archery Game Launcher
+function launchFullScreen(pageURL) {
+    const iframe = document.createElement('iframe');
+    iframe.src = pageURL;
+    iframe.style.cssText = "width: 100%; height: 100%; border: 0;";
+    iframe.allowFullscreen = true;
+
+    document.body.appendChild(iframe);
+    if (iframe.requestFullscreen) {
+        iframe.requestFullscreen();
+    }
+}
+
+document.addEventListener('fullscreenchange', () => {
+    if (!document.fullscreenElement) {
+        const iframe = document.querySelector('iframe');
+        if (iframe) {
+            document.body.removeChild(iframe);
+        }
+    }
+});
+
 document.addEventListener('DOMContentLoaded', () => {
     initPortfolioProjects(); 
     fetchGitHubData(); 
