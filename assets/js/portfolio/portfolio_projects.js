@@ -122,27 +122,41 @@ function fetchGitHubData() {
 }
 
 // Unity Archery Game Launcher
-function launchFullScreen(pageURL) {
-    const iframe = document.createElement('iframe');
-    iframe.src = pageURL;
-    iframe.style.cssText = "width: 100%; height: 100%; border: 0;";
-    iframe.allowFullscreen = true;
-
-    document.body.appendChild(iframe);
-    if (iframe.requestFullscreen) {
-        iframe.requestFullscreen();
+function launchFullScreen(gamePath) {
+    const gameContainer = document.createElement("iframe");
+  
+    // Configure the iframe
+    gameContainer.src = gamePath;
+    gameContainer.style.position = "fixed";
+    gameContainer.style.top = 0;
+    gameContainer.style.left = 0;
+    gameContainer.style.width = "100%";
+    gameContainer.style.height = "100%";
+    gameContainer.style.border = "none";
+    gameContainer.style.zIndex = 1000; // Ensure it appears above other elements
+  
+    // Append the iframe to the body
+    document.body.appendChild(gameContainer);
+  
+    // Enable full screen (optional)
+    if (gameContainer.requestFullscreen) {
+      gameContainer.requestFullscreen();
+    } else if (gameContainer.webkitRequestFullscreen) {
+      gameContainer.webkitRequestFullscreen();
+    } else if (gameContainer.msRequestFullscreen) {
+      gameContainer.msRequestFullscreen();
     }
-}
+  
+    // Close the game on escape or when the user exits full screen
+    document.addEventListener("fullscreenchange", () => {
+      if (!document.fullscreenElement) {
+        gameContainer.remove();
+      }
+    });
+  }
 
-document.addEventListener('fullscreenchange', () => {
-    if (!document.fullscreenElement) {
-        const iframe = document.querySelector('iframe');
-        if (iframe) {
-            document.body.removeChild(iframe);
-        }
-    }
-});
 
+  
 document.addEventListener('DOMContentLoaded', () => {
     initPortfolioProjects(); 
     fetchGitHubData(); 
