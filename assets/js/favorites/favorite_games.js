@@ -105,10 +105,7 @@ function handleGuess(button, statement, game) {
         allButtons.forEach(btn => {
             btn.disabled = true;
             btn.classList.add('disabled');
-            if (!btn.classList.contains('correct')) {
-                btn.style.background = "rgba(30, 30, 30, 1)";
-                btn.style.borderColor = "#007BFF";
-            }
+            btn.classList.remove('btn-primary');
         });
         showModal(game.explanation, false);
     } else {

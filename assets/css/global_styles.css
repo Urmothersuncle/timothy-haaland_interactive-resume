@@ -178,105 +178,195 @@ canvas {
     cursor: pointer;
 }
 
-@media (max-width: 480px), 
-       (min-width: 481px) and (max-width: 767px) {
-        .centered-container {
-            display: flex;
-            flex-direction: row;
-            width: 100vw; 
-            height: 100vh;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory; 
-            scroll-behavior: smooth; 
-            background-color: rgba(0, 0, 0, 0.1); 
-        }
-
-        .left-side {
-            flex: 0 0 100vw; 
-            height: 100vh;
-            overflow-y: auto;
-            padding: 20px;
-            box-sizing: border-box;
-            scroll-snap-align: start; 
-            margin-left: -20px;
-        }
-
-        .right-side {
-            flex: 0 0 100vw; 
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            background-color: transparent; 
-            color: #ffffff;
-            scroll-snap-align: start; 
-        }
-
-        .navbar {
-            background-color: transparent;
-        }
-
-        .navbar-collapse.collapse:not(.show) {
-            display: none !important;
-        }
-
-        .navbar-collapse.collapse.show {
-            display: flex !important;
-            flex-basis: auto;
-            flex-grow: 0;
-            flex-direction: row;
-            align-items: center;
-            font-size: 10px;
-        }
-
-        .navbar-collapse {
-            flex-basis: auto;
-            flex-grow: 0;
-        }
-
-        .navbar-toggler {
-            border: none; 
-            padding: 0; 
-            width: 2em; 
-            height: 1em; 
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-        }
-
-        .navbar-toggler-icon {
-            width: 1em; 
-            height: 0.5em; 
-            background-size: 1.5em 0.75em;
-        }
-
-        .tool-modal {
-        width: 100%;
+/* Style change for Mobile Devices */
+@media (max-width: 480px) {
+    .centered-container {
+        display: flex;
+        flex-direction: row;
+        width: 100vw; 
         height: 100vh;
-        top: 0;
-        left: 0;
-        }
+        overflow-x: auto;
+        scroll-snap-type: x mandatory; 
+        scroll-behavior: smooth; 
+        background-color: rgba(0, 0, 0, 0.1); 
+    }
 
-        .tool-btn button {
-            font-size: 14px;
-            padding: 5px 8px;
-        }
+    .left-side {
+        flex: 0 0 100vw; 
+        height: 100vh;
+        overflow-y: auto;
+        padding: 20px;
+        box-sizing: border-box;
+        scroll-snap-align: start; 
+        margin-left: -20px;
+    }
 
-        .tool-modal .modal-content {
+    .right-side {
+        flex: 0 0 100vw; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        padding-top: 20px;
+        background-color: transparent; 
+        color: #ffffff;
+        scroll-snap-align: start; 
+    }
+
+    .navbar {
+        background-color: transparent;
+    }
+
+    .navbar-collapse.collapse:not(.show) {
+        display: none !important;
+    }
+
+    .navbar-collapse.collapse.show {
+        display: flex !important;
+        flex-basis: auto;
+        flex-grow: 0;
+        flex-direction: row;
+        align-items: center;
+        font-size: 10px;
+    }
+
+    .navbar-collapse {
+        flex-basis: auto;
+        flex-grow: 0;
+    }
+
+    .navbar-toggler {
+        border: none; 
+        padding: 0; 
+        width: 2em; 
+        height: 1em; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+    }
+
+    .navbar-toggler-icon {
+        width: 1em; 
+        height: 0.5em; 
+        background-size: 1.5em 0.75em;
+    }
+
+    .tool-btn button {
+        font-size: 14px;
+        padding: 5px 8px;
+    }
+
+    .tool-modal .modal-content {
         width: 90%;
         margin: 10% auto;
-        }
+    }
 
-        #photoContainer img {
-            width: 100%; 
-            height: auto; 
-            max-width: 400px; 
-            margin-top: 20px; 
-            object-fit: contain;
-        }
+    #photoContainer img {
+        width: 100%; 
+        height: auto; 
+        max-width: 400px; 
+        margin-top: 20px; 
+        object-fit: contain;
+    }
 
-        .left-side .content {
-            padding-bottom: 20px; 
-        }
+    .left-side .content {
+        padding-bottom: 20px; 
+    }
+}
+
+/* Style change for Tablet Devices */
+@media (min-width: 481px) and (max-width: 767px) { 
+    .centered-container {
+        display: flex;
+        flex-direction: row;
+        width: 100vw; 
+        height: 100vh;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory; 
+        scroll-behavior: smooth; 
+        background-color: rgba(0, 0, 0, 0.1); 
+    }
+
+    .left-side {
+        flex: 0 0 100vw; 
+        height: 100vh;
+        overflow-y: auto;
+        padding: 20px;
+        box-sizing: border-box;
+        scroll-snap-align: start; 
+        margin-left: -20px;
+    }
+
+    .right-side {
+        flex: 0 0 100vw; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        background-color: transparent; 
+        color: #ffffff;
+        scroll-snap-align: start; 
+    }
+
+    .navbar {
+        background-color: transparent;
+    }
+
+    .navbar-collapse.collapse:not(.show) {
+        display: none !important;
+    }
+
+    .navbar-collapse.collapse.show {
+        display: flex !important;
+        flex-basis: auto;
+        flex-grow: 0;
+        flex-direction: row;
+        align-items: center;
+        font-size: 10px;
+    }
+
+    .navbar-collapse {
+        flex-basis: auto;
+        flex-grow: 0;
+    }
+
+    .navbar-toggler {
+        border: none; 
+        padding: 0; 
+        width: 2em; 
+        height: 1em; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+    }
+
+    .navbar-toggler-icon {
+        width: 1em; 
+        height: 0.5em; 
+        background-size: 1.5em 0.75em;
+    }
+
+    .tool-btn button {
+        font-size: 14px;
+        padding: 5px 8px;
+    }
+
+    .tool-modal .modal-content {
+        width: 90%;
+        margin: 10% auto;
+    }
+
+    #photoContainer img {
+        width: 100%; 
+        height: auto; 
+        max-width: 400px; 
+        margin-top: 20px; 
+        object-fit: contain;
+    }
+
+    .left-side .content {
+        padding-bottom: 20px; 
+    }
   }

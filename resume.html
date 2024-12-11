@@ -21,19 +21,22 @@
 
     <!-- Left side content -->
     <div class="left-side">
+
+        <!-- Content for the left side -->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-            <div class="container-fluid">
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <div class="container-fluid d-flex align-items-center">
+              <button class="navbar-toggler order-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
+              <div class="collapse navbar-collapse order-0" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Welcome</a></li>
-                    <li class="nav-item"><a class="nav-link" href="favorites.html">Favorites</a></li>
-                    <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
-                    <li class="nav-item tool-btn">
-                        <button id="toolButton" onclick="openToolModal()">Page Tools</button>
+                  <!-- Nav items -->
+                  <li class="nav-item"><a class="nav-link" href="index.html">Welcome</a></li>
+                  <li class="nav-item"><a class="nav-link" href="favorites.html">Favorites</a></li>
+                  <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+                  <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+                  <li class="nav-item tool-btn">
+                    <button id="toolButton" onclick="openToolModal()">Page Tools</button>
                   </li>
                 </ul>
               </div>
@@ -211,7 +214,7 @@
                     </div>
                     <div id="job6-details" style="display:none;">
                         <p>Lafayette, LA</p>
-                        <p>September, 2014 - November, 2018</p>
+                        <p>August, 2014 - November, 2018</p>
                         <div onclick="toggleDetail('event-support')" class="sub-detail">Event Support</div>
                         <div id="event-support" style="display:none;">
                             <p>Assisted at large-scale conferences with over 25,000 attendees, including events for major clients like Microsoft and Cisco.</p>
@@ -224,6 +227,14 @@
                         <div id="operational-duties" style="display:none;">
                             <p>Managed attendee flow, monitored session engagement, and ensured accurate registration and badging processes.</p>
                         </div>
+                        <div onclick="toggleDetail('operational-duties')" class="sub-detail">Executive Care</div>
+                        <div id="operational-duties" style="display:none;">
+                            <p>Entrusted with the care of executives, offering personalized assistance for their needs leading up to keynote presentations.</p>
+                        </div>
+                        <div onclick="toggleDetail('operational-duties')" class="sub-detail">Team Leadership</div>
+                        <div id="operational-duties" style="display:none;">
+                            <p>Directed teams of 20-30 employees, providing training on attendee support, tablet functionality for efficient navigation, and scheduling session logistics. Ensured employees were equipped with necessary resources, maintained productivity, and adhered to proper break schedules.</p>
+                        </div>
                     </div>
                 </div>
 
@@ -234,7 +245,7 @@
                     </div>
                     <div id="job7-details" style="display:none;">
                         <p>Lafayette, LA</p>
-                        <p>August, 2014 - October, 2015</p>
+                        <p>August, 2013 - October, 2015</p>
                         <div onclick="toggleDetail('inventory')" class="sub-detail">Inventory Management</div>
                         <div id="inventory" style="display:none;">
                             <p>Efficiently stocked and organized merchandise, ensuring products were accurately zoned and presented.</p>
@@ -268,20 +279,35 @@
                 </ul>
             </section>
             <section class="other-skills">
-                <h3><strong><em>Snapshot Skills:</em></strong></h3>
+                <h3><strong><em>Leadership Skills:</em></strong></h3>
                 <ul>
-                    <li>Rope Access Technician</li>
+                    <li>Team Training and Development</li>
+                    <li>Conflict Resolution</li>
+                    <li>Workflow Optimization</li>
+                    <li> Process Improvement</li>
+                    <li>Staff Scheduling and Supervision</li>
+                    <li>Delegation and Task Prioritization</li>
+                    <li>Motivating and Engaging Teams</li>
+                </ul>
+                <br>
+                <h3><strong><em>Technical Skills:</em></strong></h3>
+                <ul>
+                    <li>Microsoft Office Suite (Excel, Word, PowerPoint)</li>
+                    <li>Google Workspace (Docs, Sheets, Slides)</li>
+                    <li>Project Management Tools (Trello, Asana, Humanity, Slack)</li>
+                    <li>CRMPlatforms (Ujet, HubSpot, Zendesk)</li>
+                    <li>SPRAT certification</li>
+                </ul>
+            </section>
+            <section class="projects">
+                <h3><strong><em>Personal Projects:</em></strong></h3>
+                <ul>
+                    <li>Archery Game - Unity2D: C#</li>
+                    <li>Zyla World (Kids Video Game) - Scratch Project for Harvard University CS50 Course</li>
+                    <li>Donut Animation - Blender Geometry Nodes</li>
                 </ul>
             </section>
         </div>
-        <section class="projects">
-            <h3><strong><em>Personal Projects:</em></strong></h3>
-            <ul>
-                <li>Archery Game - Unity2D: C#</li>
-                <li>Zyla World (Kids Video Game) - Scratch Project for Harvard University CS50 Course</li>
-                <li>Donut Animation - Blender Geometry Nodes</li>
-            </ul>
-        </section>
     </div> <!-- End to Right-Side Div -->
   </div> <!-- End to Centered Container Div -->
 

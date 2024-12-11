@@ -19,19 +19,12 @@
 }
 
 .right-side h3 {
-    font-size: 2.5em;
+    font-size: 1.5rem; /* Adjust for mobile if needed */
     background: linear-gradient(270deg, #2abffa, #06db9b, #ec7df7);
     background-size: 600% 600%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: rotateGradient 5s infinite;
-    text-align: center;
-}
-
-.right-side h3 {
-    font-size: 1.5rem;
-    color: #FFF;
-    text-shadow: 2px 2px 0 #FFF, 6px 6px 0 #000;
     text-align: center;
 }
 
@@ -102,24 +95,23 @@
     filter: blur(0);  
 }
 
-@media (max-width: 480px), 
-       (min-width: 481px) and (max-width: 767px) {
-        .experience-container {
-            padding-top: 50px;
-            text-align: center;
-        }
+@media (max-width: 480px) {
+    .experience-container {
+        padding-top: 50px;
+        text-align: center;
+    }
 
-        .skills-container {
-            flex-direction: column;
-            align-items: center;
-        }
+    .skills-container {
+        max-height: 100vh; /* Ensures scrolling is possible */
+        overflow-y: auto; 
+        padding: 10px;
+        background-color: #000; /* Ensure a consistent background if needed */
+        flex-direction: column;
+        align-items: center;
+    }
 
-        .coding-skills, .other-skills {
-            width: 100%;
-            text-align: center;
-        }
-
-        .projects {
-            margin-top: 20px;
-        }
+    .coding-skills, .other-skills {
+        width: 100%;
+        text-align: center;
+    }
 }

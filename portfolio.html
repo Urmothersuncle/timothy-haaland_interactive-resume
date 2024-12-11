@@ -21,24 +21,27 @@
 
     <!-- Left side content -->
     <div class="left-side">
+
+      <!-- Content for the left side -->
       <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item"><a class="nav-link" href="index.html">Welcome</a></li>
-              <li class="nav-item"><a class="nav-link" href="favorites.html">Favorites</a></li>
-              <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
-              <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
-              <li class="nav-item tool-btn">
-                <button id="toolButton" onclick="openToolModal()">Page Tools</button>
-              </li>
-            </ul>
+        <div class="container-fluid d-flex align-items-center">
+            <button class="navbar-toggler order-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse order-0" id="navbarNav">
+              <ul class="navbar-nav">
+                <!-- Nav items -->
+                <li class="nav-item"><a class="nav-link" href="index.html">Welcome</a></li>
+                <li class="nav-item"><a class="nav-link" href="favorites.html">Favorites</a></li>
+                <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+                <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+                <li class="nav-item tool-btn">
+                  <button id="toolButton" onclick="openToolModal()">Page Tools</button>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-      </nav>
+        </nav>
       <div class="projects">
         <h1 class="roboto-flex-header projects-title">My Projects</h1>
 
