@@ -25,19 +25,30 @@
 }
 
 .image-description {
-    position: fixed; 
-    bottom: 20px; 
-    left: 765px; 
+    position: absolute; /* Use absolute positioning relative to the parent container */
+    bottom: -40px; /* Adjust the spacing below the image */
+    left: 177%; /* Center horizontally */
+    transform: translateX(-5%); /* Offset by 50% of its own width for perfect centering */
     background-color: rgba(0, 0, 0, 0.7);
     color: white;
     padding: 10px;
-    width: auto; 
-    max-width: 750px; 
+    width: auto;
+    max-width: 90%; /* Ensure it doesn't overflow smaller screens */
     box-sizing: border-box;
-    display: none; 
     font-size: 14px;
     border-radius: 4px;
-    z-index: 9999; 
+    z-index: 9999;
+    text-align: center; /* Center the text inside the box */
+    display: none; /* Hidden by default, can be shown when active */
+}
+
+.photo-slider {
+    position: relative; /* Make the slider the parent positioning context */
+}
+
+/* Display for active slides */
+.slide.active .image-description {
+    display: block; /* Show the description when the slide is active */
 }
 
 .slide.active {
@@ -238,21 +249,8 @@
     }
 
     .image-description {
-        position: fixed; 
-        bottom: 20px; 
-        left: 690px; 
-        background-color: rgba(0, 0, 0, 0.7);
-        color: white;
-        padding: 10px;
-        width: auto; 
-        max-width: 750px; 
-        max-height: 500px; 
-        box-sizing: border-box;
-        display: none; 
-        font-size: 14px;
-        border-radius: 4px;
-        z-index: 9999; 
-        overflow-y: auto;
+        font-size: 12px; /* Slightly smaller text for better fit */
+        padding: 8px;
     }
 
     .right-side {
