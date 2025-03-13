@@ -203,47 +203,89 @@ canvas {
 
     .right-side {
         flex: 0 0 100vw; 
+        min-height: 100vh; 
         display: flex;
-        align-items: center;
+        align-items: start;
         justify-content: center;
         padding: 20px;
-        padding-top: 20px;
         background-color: transparent; 
         color: #ffffff;
         scroll-snap-align: start; 
+        overflow-y: auto;
     }
 
     .navbar {
-        background-color: transparent;
-    }
-
-    .navbar-collapse.collapse:not(.show) {
-        display: none !important;
-    }
-
-    .navbar-collapse.collapse.show {
-        display: flex !important;
-        flex-basis: auto;
-        flex-grow: 0;
-        flex-direction: row;
-        align-items: center;
-        font-size: 10px;
-    }
-
-    .navbar-collapse {
-        flex-basis: auto;
-        flex-grow: 0;
+        position: absolute;
+        top: 10px;
+        left: 1px; /* Keeps it in the top-left of the left-side container */
+        background-color: transparent; /* Keeps it minimal & non-intrusive */
+        z-index: 20;
     }
 
     .navbar-toggler {
-        border: none; 
-        padding: 0; 
-        width: 2em; 
-        height: 1em; 
+        display: block; /* Ensure the hamburger button is always visible */
+        font-size: 24px;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+        width: 40px;
+        height: 30px;
+        padding: 1px;
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+
+    .navbar-toggler:focus {
+        outline: none; 
+        box-shadow: 0 0 40px rgba(255, 255, 255, 0.5); 
+    }
+
+    /* The navbar menu should appear inside the left-side container */
+    .navbar-collapse {
+        position: absolute;
+        top: 5px; /* Aligns with the navbar */
+        left: 60px; /* Moves it away from the edge */
+        background-color: transparent; /* Adds some contrast */
+        display: flex;
+        flex-direction: row; /* Ensure links appear in a row */
+        justify-content: start;
+        align-items: center;
+        padding: 10px 1px;
+        border-radius: 10px;
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        opacity: 0;
+        transform: translateY(-10px);
+        visibility: hidden;
+    }
+
+    /* When menu is active, it becomes visible */
+    .navbar-collapse.show {
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
+    }
+
+    /* Make sure nav links are displayed in a row */
+    .navbar-nav {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .navbar-nav .nav-item {
+        list-style: none;
+    }
+
+    .navbar-nav .nav-link {
         color: white;
+        text-decoration: none;
+        padding: 5px 2px;
+        font-size: 14px;
+    }
+
+    .navbar-nav .nav-link:hover {
+        color: lightgrey;
     }
 
     .navbar-toggler-icon {
@@ -254,7 +296,7 @@ canvas {
 
     .tool-btn button {
         font-size: 14px;
-        padding: 5px 8px;
+        padding: 5px 2px;
     }
 
     .tool-modal .modal-content {
@@ -310,6 +352,7 @@ canvas {
     }
 
     .navbar {
+        width: 100%;
         background-color: transparent;
     }
 
@@ -327,8 +370,10 @@ canvas {
     }
 
     .navbar-collapse {
-        flex-basis: auto;
-        flex-grow: 0;
+        width: 100%; /* Make sure the menu takes up the full width */
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
     }
 
     .navbar-toggler {

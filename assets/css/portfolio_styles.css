@@ -148,4 +148,8 @@
             color: white;
             text-align: center;
         }
+
+        .right-side {
+            align-items: center;
+        }
 }
