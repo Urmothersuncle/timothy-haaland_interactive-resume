@@ -25,21 +25,7 @@
 }
 
 .image-description {
-    position: absolute; /* Use absolute positioning relative to the parent container */
-    bottom: -40px; /* Adjust the spacing below the image */
-    left: 177%; /* Center horizontally */
-    transform: translateX(-5%); /* Offset by 50% of its own width for perfect centering */
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 10px;
-    width: auto;
-    max-width: 90%; /* Ensure it doesn't overflow smaller screens */
-    box-sizing: border-box;
-    font-size: 14px;
-    border-radius: 4px;
-    z-index: 9999;
-    text-align: center; /* Center the text inside the box */
-    display: none; /* Hidden by default, can be shown when active */
+    color: #FFF;
 }
 
 .photo-slider {
@@ -249,8 +235,21 @@
     }
 
     .image-description {
-        font-size: 12px; /* Slightly smaller text for better fit */
+        position: absolute; /* Use absolute positioning relative to the parent container */
+        bottom: -40px; /* Adjust the spacing below the image */ 
+        left: 177%; /* Center horizontally */
+        transform: translateX(-5%); /* Offset by 50% of its own width for perfect centering */
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
         padding: 8px;
+        width: auto;
+        max-width: 90%; /* Ensure it doesn't overflow smaller screens */
+        box-sizing: border-box;
+        font-size: 12px;
+        border-radius: 4px;
+        z-index: 9999;
+        text-align: center; /* Center the text inside the box */
+        display: none; /* Hidden by default, can be shown when active */
     }
 
     .right-side {

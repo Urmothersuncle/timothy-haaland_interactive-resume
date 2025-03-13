@@ -1,10 +1,44 @@
+body {
+    cursor: none;
+}
+
+.centered-container {
+    display: flex;
+    align-items: flex-start; /* Ensures left and right sides align at the top */
+    cursor: default;
+}
+
 .right-side {
     display: flex;
-    flex-direction: column; 
-    align-items: center; 
-    gap: 20px; 
-    max-width: 800px;
-    margin: 0 auto; 
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start; /* Ensures content inside starts at the top */
+    padding-top: 50px; /* Adjust if needed for consistency */
+}
+
+h1.skills {
+    margin: 0; /* Reset margin */
+    padding: 0; /* Reset padding */
+    text-align: center;
+    width: 100%; 
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 20px;
+    text-align: center;
+    color: #FFF; 
+    padding-top: 40px; 
+}
+
+.coding-skills, 
+.leadership-skills, 
+.tech-skills, 
+.projects {
+    padding: 10px;
+    border: 1px solid #444; /* Optional: Just to visually separate sections */
+    border-radius: 5px;
 }
 
 .centered-container h1 {
@@ -26,42 +60,6 @@
     -webkit-text-fill-color: transparent;
     animation: rotateGradient 5s infinite;
     text-align: center;
-}
-
-.coding-skills, .other-skills {
-    flex: 1;
-    width: 100%; 
-    text-align: center;
-    color: #FFF;
-}
-
-.skills-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px; 
-    width: 100%; 
-}
-
-.right-side ul {
-    list-style-type: none; 
-    padding: 0;
-}
-
-.right-side li {
-    margin-bottom: 10px; 
-    line-height: 1.6; 
-}
-
-.projects {
-    width: 100%;
-    text-align: left;
-    color:#FFF;
-    text-align: center;
-}
-
-.projects ul {
-    list-style-type: none;
-    padding: 0;
 }
 
 .sub-detail {
@@ -95,6 +93,17 @@
     filter: blur(0);  
 }
 
+#floating-brush {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background: url('/assets/images/resume/Paintbrush-cursor.png') no-repeat center center;
+    background-size: contain;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    display: block !important;
+}
+
 @media (max-width: 480px) {
     .experience-container {
         padding-top: 50px;
@@ -108,6 +117,7 @@
         background-color: #000; /* Ensure a consistent background if needed */
         flex-direction: column;
         align-items: center;
+        grid-template-columns: 1fr;
     }
 
     .coding-skills, .other-skills {
