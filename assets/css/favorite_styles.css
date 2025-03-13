@@ -223,7 +223,7 @@
 }
 
 /* Style change for Mobile Devices */
-@media (max-width: 480px) {
+@media (max-width: 767px) {
     .photo-slider {
         margin: 0;
         padding: 10px;

@@ -59,20 +59,10 @@
 }
 
 
-/* Style change for Mobile Devices */
-@media (max-width: 480px) {
-    .content {
-        padding-top: 40px; 
-    }
 
-    .number-button {
-        padding: 8px 15px; 
-        font-size: 0.875rem; 
-    }
-}
 
 /* Style change for Tablet Devices */
-@media (min-width: 481px) and (max-width: 767px) {
+@media (max-width: 767px) {
     .content {
         padding-top: 45px; 
     }
