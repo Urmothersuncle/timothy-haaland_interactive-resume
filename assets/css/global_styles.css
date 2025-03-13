@@ -192,6 +192,7 @@ canvas {
     }
 
     .left-side {
+        padding-top: 20px; 
         flex: 0 0 100vw; 
         height: 100dvh;
         overflow-y: auto;
@@ -202,6 +203,7 @@ canvas {
     }
 
     .right-side {
+        padding-top: 20px; 
         flex: 0 0 100vw; 
         min-height: 100dvh; 
         display: flex;
