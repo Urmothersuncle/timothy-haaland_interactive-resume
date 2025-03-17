@@ -99,6 +99,7 @@ h1.skills {
     height: 32px;
     background: url('/assets/images/resume/paintbrush-cursor.png') no-repeat center center;
     background-size: contain;
+    background-position: center center;
     pointer-events: none;
     transform: translate(-50%, -50%);
     display: block !important;
